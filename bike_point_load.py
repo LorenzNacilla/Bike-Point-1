@@ -1,5 +1,6 @@
 import os
 import boto3
+import sys
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -18,7 +19,7 @@ s3_client = boto3.client(
 
 try:
     try:
-        s3_client.list_buckets(bucket=bucket)
+        s3_client.list_buckets()
     except:
         print('Access Denied')
         sys.exit(1)
