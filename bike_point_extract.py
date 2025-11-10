@@ -5,7 +5,7 @@ import requests
 
 url = 'https://api.tfl.gov.uk/BikePoint'
 
-response = requests.get(url, timeout = 10, verify=False)
+response = requests.get(url, timeout = 10)
 retry_codes = [249,500]
 
 count = 0
